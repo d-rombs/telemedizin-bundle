@@ -165,6 +165,7 @@ Das Bundle stellt die folgenden API-Endpunkte bereit:
 - `GET /api/telemedizin/doctors/{id}` - Arzt abrufen
 - `PUT /api/telemedizin/doctors/{id}` - Arzt aktualisieren
 - `DELETE /api/telemedizin/doctors/{id}` - Arzt löschen
+- `GET api/telemedizin/doctors/search` - Ärzte suchen
 
 ### Zeitslots
 
@@ -175,6 +176,7 @@ Das Bundle stellt die folgenden API-Endpunkte bereit:
 - `DELETE /api/telemedizin/timeslots/{id}` - Zeitslot löschen
 - `GET /api/telemedizin/doctors/{doctor}/timeslots` - Zeitslots für einen Arzt abrufen
 - `POST /api/telemedizin/doctors/{doctor}/timeslots/generate` - Zeitslots für einen Arzt generieren
+- `GET api/telemedizin/timeslots/check-availability/{id}` - Verfügbarkeitsprüfung
 
 ### Termine
 
@@ -185,6 +187,7 @@ Das Bundle stellt die folgenden API-Endpunkte bereit:
 - `DELETE /api/telemedizin/appointments/{id}` - Termin löschen
 - `GET /api/telemedizin/appointments/patient/{email}` - Termine für einen Patienten abrufen
 - `PATCH /api/telemedizin/appointments/{id}/cancel` - Termin stornieren
+
 
 ## Tests
 
