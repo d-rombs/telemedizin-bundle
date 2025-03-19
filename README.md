@@ -32,15 +32,6 @@ return [
         'workday_end' => '18:00', // Ende des Arbeitstages
     ],
 
-    // Termin-Einstellungen
-    'appointments' => [
-        'max_per_day' => 10, // Maximale Anzahl an Terminen pro Tag für einen Arzt
-        'status_types' => [
-            'scheduled',
-            'completed',
-            'cancelled'
-        ],
-    ],
 
     // Routen-Präfix
     'routes' => [
@@ -113,10 +104,6 @@ $appointment = Appointment::find($id);
 \Mail::to($appointment->patient_email)
     ->send(new AppointmentConfirmation($appointment));
 ```
-
-### MailHog für Entwicklung
-
-Für die lokale Entwicklung empfehlen wir die Verwendung von [MailHog](https://github.com/mailhog/MailHog), um E-Mails abzufangen und in einer Weboberfläche anzuzeigen. Die mitgelieferte `docker-compose.override.yml` Datei enthält bereits die entsprechende Konfiguration.
 
 ## Funktionen
 

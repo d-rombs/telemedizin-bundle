@@ -167,8 +167,8 @@ class TimeSlotController extends Controller
             $startDate = Carbon::parse($validatedData['start_date']);
             $endDate = Carbon::parse($validatedData['end_date']);
             $slotDuration = $validatedData['slot_duration'] ?? config('telemedizin.time_slots.duration', 30);
-            $startTime = $validatedData['start_time'];
-            $endTime = $validatedData['end_time'];
+            $startTime = $validatedData['start_time'] ?? config('telemedizin.time_slots.duration', '8:00');
+            $endTime = $validatedData['end_time'] ?? config('telemedizin.time_slots.duration', '18:00');
             $daysOfWeek = $validatedData['days_of_week'] ?? [1, 2, 3, 4, 5]; // Mo-Fr standardmäßig
             
             $createdSlots = [];
